@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Group id="mainFrame" fx:id="mainFrame" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frame.gameFrameController">
+   <children>
+      <SubScene id="gameScene" fx:id="gameScene" depthBuffer="true" fill="WHITE" height="691.0" width="1023.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+      <ScrollPane id="gameInfoPane" fx:id="gameInfoPane" hbarPolicy="NEVER" layoutX="823.0" layoutY="44.0" opacity="0.38" pannable="true" prefHeight="648.0" prefWidth="200.0" vbarPolicy="NEVER" visible="false">
+         <content>
+            <TextArea id="gameInfo" fx:id="gameInfo" editable="false" prefHeight="647.0" prefWidth="200.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextArea>
+         </content></ScrollPane>
+      <Pane id="menuPane" fx:id="menuPane" prefHeight="44.0" prefWidth="1024.0" style="-fx-background-color: 57D2F7;">
+         <children>
+            <Label id="timeLabel" fx:id="timeLabel" alignment="CENTER" layoutX="14.0" layoutY="3.0" prefHeight="39.0" prefWidth="124.0" style="-fx-background-color: #DDF0ED;" text="time" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button id="startButton" fx:id="startButton" layoutX="159.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleStartButtonOnMouseAction" prefHeight="34.0" prefWidth="69.0" text="开始" />
+            <Button id="restButton" fx:id="restButton" layoutX="239.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleRestButtonOnMouseAction" prefHeight="34.0" prefWidth="69.0" text="重置" />
+            <Button id="recoverButton" fx:id="recoverButton" layoutX="498.0" layoutY="7.0" mnemonicParsing="false" onAction="#hundlerecoverButtonAction" prefHeight="34.0" prefWidth="69.0" text="复原" />
+            <Button id="gameInfoButton" fx:id="gameInfoButton" layoutX="658.0" layoutY="7.0" mnemonicParsing="false" onAction="#hundleGameInfoButtonAction" prefHeight="34.0" prefWidth="89.0" text="信息面板(开)" />
+            <Button id="readButton" fx:id="readButton" layoutX="330.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleReadButtonAction" prefHeight="34.0" prefWidth="69.0" text="读档" />
+            <Button id="saveButton" fx:id="saveButton" layoutX="414.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefHeight="34.0" prefWidth="69.0" text="存档" />
+            <Button id="optionButton" fx:id="optionButton" layoutX="764.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleOptionButtonAction" prefHeight="34.0" prefWidth="69.0" text="设置" />
+            <Button id="tipsButtion" fx:id="tipsButtion" layoutX="578.0" layoutY="7.0" mnemonicParsing="false" onAction="#hundleTipsButtionAction" prefHeight="34.0" prefWidth="69.0" text="提示" />
+         </children>
+      </Pane>
+      <Button id="closeButton" fx:id="closeButton" layoutX="968.0" layoutY="12.0" mnemonicParsing="false" onAction="#hundleCloseButtonAction" text="↑" />
+      <Pane id="optionPanel" fx:id="optionPanel" layoutX="224.0" layoutY="165.0" opacity="0.84" prefHeight="288.0" prefWidth="526.0" style="-fx-background-color: #81C2D6;" visible="false">
+         <children>
+            <Button id="optionPanel_colseButton" fx:id="optionPanel_colseButton" layoutX="488.0" layoutY="3.0" mnemonicParsing="false" onAction="#huandleOptionPanel_colseButtonAction" text="X" />
+            <Slider id="optionPanel_RubikSensibilityControler" fx:id="optionPanel_RubikSensibilityControler" layoutX="72.0" layoutY="77.0" majorTickUnit="20.0" minorTickCount="1" prefHeight="44.0" prefWidth="189.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Label layoutX="72.0" layoutY="46.0" text="魔方旋转灵敏度：">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button id="optionPanel_restButton" fx:id="optionPanel_restButton" layoutX="272.0" layoutY="77.0" mnemonicParsing="false" onAction="#hundleOptionPanel_restButtonAction" text="重置" />
+         </children>
+      </Pane>
+   </children>
+</Group>
